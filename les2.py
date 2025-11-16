@@ -45,21 +45,10 @@
 #print(next(g))
 
 
-def f2(a, b):
-    if b == 0:
-        if a == 0:
-            return 0
-        else:
-            return None
+from colorama import init, Fore, Style
 
-    if b < 0:
-        return a * b
-    else:
-        return a / b
+init()
 
-print(f"f2(10, -2) (множення): {f2(10, -2)}")
-print(f"f2(10, 5) (ділення): {f2(10, 5)}")
-print(f"f2(10, 0) (помилка ділення): {f2(10, 0)}")
-
-
-
+print(Fore.red + 'Це червоний текст')
+print('Це звичайний текст')
+print(Fore.yellow + 'Це жовтий текст')

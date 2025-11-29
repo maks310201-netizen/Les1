@@ -45,13 +45,13 @@
 #print(next(g))
 
 
-from colorama import init, Fore, Style
+#from colorama import init, Fore, Style
 
-init()
+#init()
 
-print(Fore.red + 'Це червоний текст')
-print('Це звичайний текст')
-print(Fore.yellow + 'Це жовтий текст')
+#print(Fore.red + 'Це червоний текст')
+#print('Це звичайний текст')
+#print(Fore.yellow + 'Це жовтий текст')
 
 
 
@@ -60,95 +60,128 @@ print(Fore.yellow + 'Це жовтий текст')
 
 
 # 1.
-users_age_groups = {
-    "Данічка": "Молодий карлік",
-    "Вадім": "Дорослий",
-    "Олена": "Пенсія",
-    "Дмитро": "Малолітка",
-    "Віктор": "дорослий"
-}
-user_name = input("Введіть ім'я користувача для перевірки вікової групи: ")
+#users_age_groups = {
+ #   "Данічка": "Молодий карлік",
+  #  "Вадім": "Дорослий",
+   # "Олена": "Пенсія",
+    #"Дмитро": "Малолітка",
+    #"Віктор": "дорослий"
+#}
+#user_name = input("Введіть ім'я користувача для перевірки вікової групи: ")
 
-if user_name in users_age_groups:
-    age_group = users_age_groups[user_name]
-    print("Вікова група користувача '{user_name}' — {age_group}.")
-else:
-    print("Користувача з ім'ям '{user_name}' не знайдено.")
+#if user_name in users_age_groups:
+ #   age_group = users_age_groups[user_name]
+  #  print("Вікова група користувача '{user_name}' — {age_group}.")
+#else:
+ #   print("Користувача з ім'ям '{user_name}' не знайдено.")
 
 
 
 
 #2
-def safe_integer_conversion():
+#def safe_integer_conversion():
 
-    user_input = input("Будь ласка, введіть число: ").strip()
+ #   user_input = input("Будь ласка, введіть число: ").strip()
 
-    try:
+  #  try:
 
-        converted_number = int(user_input)
+   #     converted_number = int(user_input)
 
-        print(f"{user_input}{converted_number}")
+    #    print(f"{user_input}{converted_number}")
 
-    except ValueError:
+ #   except ValueError:
 
-        print(f"Введене значення '{user_input}' не можна конвертувати у ціле число.")
-        print("Будь ласка, переконайтеся, що ви вводите лише цілі числа (наприклад, 123 або -45).")
+  #      print(f"Введене значення '{user_input}' не можна конвертувати у ціле число.")
+   #     print("Будь ласка, переконайтеся, що ви вводите лише цілі числа (наприклад, 123 або -45).")
 
 
-safe_integer_conversion()
+#safe_integer_conversion()
 
 
 
 
 
 #3
-def read_and_display_file():
+#def read_and_display_file():
 
-    file_path = input("Введіть повний шлях до файлу (наприклад, file.txt): ").strip()
+ #   file_path = input("Введіть повний шлях до файлу (наприклад, file.txt): ").strip()
 
-    if not file_path:
-        print("Шлях до файлу не може бути порожнім.")
-        return
+  #  if not file_path:
+   #     print("Шлях до файлу не може бути порожнім.")
+    #    return
 
-    try:
-        with open(file_path, 'r', encoding='utf-8') as file:
-            content = file.read()
+    #try:
+     #   with open(file_path, 'r', encoding='utf-8') as file:
+      #      content = file.read()
 
-    except FileNotFoundError:
-        print(f"Файл '{file_path}' не знайдено.")
-        print("Будь ласка, перевірте ім'я файлу.")
+    #except FileNotFoundError:
+     #   print(f"Файл '{file_path}' не знайдено.")
+      #  print("Будь ласка, перевірте ім'я файлу.")
 
-read_and_display_file()
-
-
+#read_and_display_file()
 
 
 
 
-class Bank:
 
-    def __init__(self, account_number, initial_balance=0.0):
-        self.account_number = account_number
-        self.balance = initial_balance
 
-    def deposit(self, amount):
-        if amount > 0:
-            self.balance += amount
-            print(f"Внесено{amount}. Новий баланс {self.balance}")
-        else:
-            print("Сума депозиту повинна бути додатною.")
+#class Bank:
 
-    def withdraw(self, amount):
+ #   def __init__(self, account_number, initial_balance=0.0):
+  #      self.account_number = account_number
+   #     self.balance = initial_balance
 
-        if amount <= 0:
-            print("Сума зняття повинна бути додатною.")
-            return
+    #def deposit(self, amount):
+     #   if amount > 0:
+      #      self.balance += amount
+       #     print(f"Внесено{amount}. Новий баланс {self.balance}")
+        #else:
+ #           print("Сума депозиту повинна бути додатною.")
+#
+#    def withdraw(self, amount):
 
-        if self.balance >= amount:
-            self.balance -= amount
-            print(f"Знято: {amount}. Новий баланс: {self.balance}")
-            return True
-        else:
-            print(f"Доступно тільки {self.balance}")
-            return False
+   #     if amount <= 0:
+  #          print("Сума зняття повинна бути додатною.")
+ #           return
+#
+#        if self.balance >= amount:
+    #        self.balance -= amount
+   #         print(f"Знято: {amount}. Новий баланс: {self.balance}")
+  #          return True
+ #       else:
+#           print(f"Доступно тільки {self.balance}")
+#            return False
 
+
+
+
+
+
+
+#22.11.2025
+#           №1
+#import requests
+
+#r = requests.get('https://coinmarketcap.com/')
+
+#print(r.text.split("class=\"sc-fa25c04c-0 eAphWs\">")[1].split('</span>')[0].split("<span>$")[1].replace(',', ''))
+#           №2
+import requests, sqlite3
+
+
+connection = sqlite3.connect("itstep_DB.sl3", timeout=5)
+cur = connection.cursor()
+cur.execute('CREATE TABLE first_table (name TEXT, price TEXT)')
+
+r = requests.get("https://coinmarketcap.com/")
+price = (r.text.split("class=\"sc-fa25c04c-0 eAphWs\">")[1].split('</span>')[0])
+
+cur.execute(f"INSERT INTO first_table (name, price) VALUES (\"Bitcoin\", \"{price}\")")
+
+connection.commit()
+
+a = cur.execute("SELECT name, price FROM first_table").fetchall()
+
+print(a)
+
+connection.close()

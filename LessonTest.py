@@ -125,3 +125,43 @@ letter_gen = random_letter_generator()
 for _ in range(5):
     letter = next(letter_gen)
     print(letter, end=' ')
+
+
+
+#Дз
+import logging
+from datetime import datetime
+
+DATE= "Year-month-day"
+
+logging.basicConfig(
+    level=logging.INFO,
+    format='(asctime)s - (levelname)s - (message)s',
+    datefmt=DATE,
+    filename='app.log',
+)
+logging.info("Рівень INFO з поточною датою.")
+
+
+#Дз
+import logging
+import sys
+
+logging.basicConfig(
+    level=logging.ERROR,
+    format='(asctime)s - (levelname)s - (message)s',
+    filename='error_log.log',
+)
+def divide_numbers(a, b):
+    try:
+        result = a / b
+        print(f"Результат ділення {a} на {b}: {result}")
+        return result
+
+    except ZeroDivisionError as e:
+        error_message = f"Спроба ділення на нуль{e}"
+        logging.error(error_message)
+
+        print(f"\nНеможливо виконати дію: {e}")
+        return None
+
